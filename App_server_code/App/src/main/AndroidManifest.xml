@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.parking">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 네트워크 사용위한 퍼미션 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="EURECAR"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoadingActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDVFyikwpdRXZ7yOiZ0TzaHAcQfCzG5jA8" />
+
+        <activity android:name=".MapActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".StartActivity" />
+        <activity android:name=".Map2Activity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".Park3Activity" />
+        <activity android:name=".Park2Activity" />
+        <activity
+            android:name=".Park1Activity"
+            android:theme="@style/Transparent" />
+
+        <service android:name="org.eclipse.paho.android.service.MqttService"
+            tools:ignore="WrongManifestParent" />
+
+    </application>
+
+</manifest>

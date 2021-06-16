@@ -1,0 +1,28 @@
+
+.linkStyle {
+    color : white;
+    text-decoration: none;
+}
+
+.linkStyle:hover {
+    color : yellow;
+}
+
+.menu {
+    margin: 0px auto;
+}
+
+.menuBar {
+    display: flex;
+    width : 50%;
+    margin: 0px auto;
+}
+
+.tableDiv{
+    width: 70%;
+    margin: auto;
+}
+
+.background{
+    background-color: #F2F5F6;
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F5F6"
+    android:orientation="vertical"
+    tools:context=".SearchActivity">
+
+    <!--툴바-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="#F2F5F6"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="374dp"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo" />
+        </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
+
+    <!--검색창-->
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="13dp"
+            android:backgroundTint="#9E9A9C"
+            android:completionThreshold="1"
+            android:ems="10"
+            android:fontFamily="@font/wmf"
+            android:gravity="left"
+            android:hint="Click to search"
+            android:theme="@style/EditTheme" />
+
+        <requestFocus />
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/autoCompleteTextView"
+            android:layout_alignBottom="@+id/autoCompleteTextView"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bin_main"
+            android:fontFamily="@font/wmf"
+            android:text="검색" />
+    </RelativeLayout>
+</LinearLayout>
